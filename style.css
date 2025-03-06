@@ -10,3 +10,22 @@ body {
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     overflow: hidden; /* Empêche les barres de défilement inutiles */
 }
+
+/* Backgrounds pour chaque page */
+.body-Accueil {
+    background-image: url(./Images/Background_Accueil.jpg);
+}
+
+/*Header*/
+header { /* Couleur de fond semi-transparente */
+    padding: 10px 0; /* Espacement interne */ 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 60px;
+    line-height: 12px;/* Fixe le header en haut de la page */
+}
+
+header h1 {
+    font-size: 90px;
+}

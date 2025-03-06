@@ -1,4 +1,4 @@
 # Entreprenariat
 
 Idée nom entreprise: 
-    - SurvivEat 
+    - Surviv'Eat 
