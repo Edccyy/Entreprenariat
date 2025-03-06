@@ -1,0 +1,12 @@
+/*Body*/
+body {
+    background: url(./Images/Background_Accueil.jpg) no-repeat fixed;
+    height: 100vh; /* Fait en sorte que le body prenne toute la hauteur de l'écran */
+    width: 100vw; /* Assure que le body couvre toute la largeur */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les espacements internes */
+    background-size: cover; /* Fait en sorte que l'image couvre toute la surface */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    overflow: hidden; /* Empêche les barres de défilement inutiles */
+}
