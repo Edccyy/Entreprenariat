@@ -14,10 +14,14 @@ body {
 .body-Accueil {
     background-image: url(./Images/Background_Accueil.jpg);
 }
-.body-Formules {
-    background-image: url(./Images/Backgroud_Formules.jpg);
-}  
 
+.body-Formules {
+    background-image: url(./Images/Background_Formules.jpg);
+}
+
+.body-Lieux {
+    background-image: url(./Images/9568816.jpg);
+}
 
 /* Style de la navigation pour qu'elle reste accessible */
 nav {
