@@ -1,6 +1,6 @@
 /*Body*/
 body {
-    background: url(./Images/Background_Accueil.jpg) no-repeat fixed;
+    background: url(./Images/Background_Acceuil.jpg) no-repeat fixed;
     height: 100vh; /* Fait en sorte que le body prenne toute la hauteur de l'écran */
     width: 100vw; /* Assure que le body couvre toute la largeur */
     margin: 0; /* Supprime les marges */
@@ -11,21 +11,78 @@ body {
     overflow: hidden; /* Empêche les barres de défilement inutiles */
 }
 
-/* Backgrounds pour chaque page */
 .body-Accueil {
     background-image: url(./Images/Background_Accueil.jpg);
 }
 
-/*Header*/
-header { /* Couleur de fond semi-transparente */
-    padding: 10px 0; /* Espacement interne */ 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 60px;
-    line-height: 12px;/* Fixe le header en haut de la page */
+.body-Formules {
+    background-image: url(./Images/Background_Formules.jpg);
 }
 
-header h1 {
-    font-size: 90px;
+.body-Lieux {
+    background-image: url(./Images/9568816.jpg);
+}
+
+/* Style de la navigation pour qu'elle reste accessible */
+nav {
+    position: fixed; /* Fixe la barre de navigation en haut */
+    top: 10px;
+    left: 0;
+    width: 100%;
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    justify-content: space-around; /* Change to space-around for equal distribution */
+    z-index: 1000; /* Assure qu'elle est au-dessus des pages */
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
+}
+
+nav div {
+    flex: 0 0 10%; /* Set each button container to 10% of the screen width */
+    display: flex;
+    justify-content: center; /* Center the button within the div */
+}
+
+nav button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the buttons appear side by side */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+nav button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Gestion des pages */
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* La page active devient visible */
+.page.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }

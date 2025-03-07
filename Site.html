@@ -6,14 +6,9 @@
     <title>on a pas encore de nom</title>
     <link rel ="stylesheet" href ="style.css">
     <link rel ="icon" href ="Images/Icon.png" type ="image/png">
-    <style>
-        .page { display: none; } /* Cacher toutes les pages */
-        .active { display: block; } /* Afficher seulement la page active */
-    </style>
 </head>
 
 <body>
-
     <nav>
         <div>
             <button onclick="showPage('Accueil')"> Accueil</button>
@@ -47,12 +42,18 @@
 
     <script>
         function showPage(pageId) {
-            // Cacher toutes les sections
-            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            let currentPage = document.querySelector('.page.active'); // Page actuellement affichée
+            let nextPage = document.getElementById(pageId); // Nouvelle page à afficher
 
-            // Afficher la section sélectionnée
-            document.getElementById(pageId).classList.add('active');
-        }
+            if (currentPage !== nextPage) { // Vérifie qu'on change bien de page
+                currentPage.classList.remove('active'); // Enlève la classe active de la page actuelle
+                nextPage.classList.add('active'); // Active la transition pour la nouvelle page
+
+                // Modifier le background du body
+                document.body.className = ''; // Réinitialiser les classes du body
+                document.body.classList.add('body-' + pageId); // Ajouter la classe de fond
+                }
+            }
     </script>
 
 </body>
