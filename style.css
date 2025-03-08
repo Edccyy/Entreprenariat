@@ -13,6 +13,8 @@ body {
 
 .body-Accueil {
     background-image: url(./Images/Background_Acceuil.jpg);
+    background-color: rgba(0, 128, 0, 0.5); /* Green filter with 50% opacity */
+    z-index: 1; /* Ensure the filter is above the background image */
 }
 
 .body-Formules {
@@ -20,7 +22,7 @@ body {
 }
 
 .body-Lieux {
-    background-image: url(./Images/9568816.jpg);
+    background-image: url(./Images/Background_Lieux.webp); 
 }
 
 /* Nav */
@@ -243,6 +245,27 @@ h4 {
     color: white;
     border-radius: 1vh;
     margin-left: 0.5vw; /* Add margin to the left */
+}
+
+
+/* Map */
+.map{
+    font-size: 3vh;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 3vw;
+    padding: 1vh 1vw;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
+    border: 0.2vh solid white;
+    border-radius: 1vh; 
+}
+
+.map img {
+    width: 40vw;
+    height: 50vh;
+    border-radius: 1vh;
+    bottom: 1vh;
 }
 
 /* Style for the footer */
