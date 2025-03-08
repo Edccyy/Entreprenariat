@@ -91,7 +91,7 @@ nav button:hover {
 
 h1 {
     font-size: 8em;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -101,8 +101,9 @@ h1 {
 /* Style du header*/
 header {
     position: fixed;
-    top: 350px;
-    left: 0;
+    top: 150px;
+    margin-left: 3%;
+    max-width: 80%;
     width: 100%;
     display: flex;
     justify-content: center; /* Center the content horizontally */
@@ -110,6 +111,39 @@ header {
     padding: 10px 20px;
     box-sizing: border-box;
     z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific header style for the 'Accueil' page */
+.body-Accueil header {
+    top: 150px; /* Adjust the top position */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    color: white; /* Change text color to white */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    border: 2px solid white; /* Add a white border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    max-width: 80%; /* Reduce the width of the box around the h1 */
+    margin-left: 3%; /* Center the box horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.body-Formules header {
+    top: 300px; /* Adjust the top position */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    color: white; /* Change text color to white */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    border: 2px solid white; /* Add a white border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 40%; /* Add a subtle shadow */
 }
 
 /* Style for the left container on the 'formules' page */

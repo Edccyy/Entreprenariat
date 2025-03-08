@@ -21,7 +21,9 @@
     </nav>
 
     <section id="Accueil" class="page active">
-        <h1>Bienvenue sur la page d'Accueil</h1>
+        <header>    
+            <h1>Bienvenue sur la page d'Accueil</h1>
+        </header>
         <p>Contenu de la première page.</p>
     </section>
 
@@ -49,20 +51,25 @@
         <p>© 2025 Surviv'Eat - Tous droits réservés</p>
         <a href="">Mentions légales</a>
     </footer>
-    <script>
+        <script>
         function showPage(pageId) {
             let currentPage = document.querySelector('.page.active'); // Page actuellement affichée
             let nextPage = document.getElementById(pageId); // Nouvelle page à afficher
-
+    
             if (currentPage !== nextPage) { // Vérifie qu'on change bien de page
                 currentPage.classList.remove('active'); // Enlève la classe active de la page actuelle
                 nextPage.classList.add('active'); // Active la transition pour la nouvelle page
-
+    
                 // Modifier le background du body
                 document.body.className = ''; // Réinitialiser les classes du body
                 document.body.classList.add('body-' + pageId); // Ajouter la classe de fond
-                }
             }
+        }
+    
+        // Appeler showPage pour la page d'accueil lors du chargement initial
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('Accueil');
+        });
     </script>
 </body>
 
