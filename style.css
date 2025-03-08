@@ -127,3 +127,25 @@ header {
     padding: 100px; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in the element's total width and height */
 }
+
+/* Style for the footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #154517;
+    border-top: 5px solid #4CAF50;
+    width: 100%; /* Ensure the footer takes the full width */
+    position: fixed; /* Fix the footer at the bottom */
+    bottom: 0; /* Align the footer to the bottom */
+    color: white;
+}
+
+footer a {
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Add margin between links */
+}
