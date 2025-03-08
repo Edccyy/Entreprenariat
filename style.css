@@ -1,14 +1,14 @@
 /*Body*/
 body {
     background: url(./Images/Background_Acceuil.jpg) no-repeat fixed;
-    height: 100vh; /* Fait en sorte que le body prenne toute la hauteur de l'écran */
-    width: 100vw; /* Assure que le body couvre toute la largeur */
-    margin: 0; /* Supprime les marges */
-    padding: 0; /* Supprime les espacements internes */
-    background-size: cover; /* Fait en sorte que l'image couvre toute la surface */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    overflow: hidden; /* Empêche les barres de défilement inutiles */
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .body-Accueil {
@@ -17,49 +17,39 @@ body {
 
 .body-Formules {
     background-image: url(./Images/Background_Formules.jpg);
+    overflow-y: auto;
 }
 
 .body-Lieux {
     background-image: url(./Images/9568816.jpg);
 }
 
-/* Style de la navigation pour qu'elle reste accessible */
+/* Navigation */
 nav {
-    position: fixed; /* Fixe la barre de navigation en haut */
+    position: fixed;
     top: 1vh;
     left: 0;
     width: 100vw;
-    display: flex; /* Utilise flexbox pour aligner les éléments */
-    justify-content: space-around; /* Change to space-around for equal distribution */
-    z-index: 1000; /* Assure qu'elle est au-dessus des pages */
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
     padding: 1vh;
     border-radius: 1vh;
-    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
-}
-
-nav div {
-    flex: 0 0 10vw; /* Set each button container to 10% of the screen width */
-    display: flex;
-    justify-content: center; /* Center the button within the div */
+    box-sizing: border-box;
 }
 
 nav button {
-    background-color: #4CAF50; /* Green background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 1.5vh 3.2vw; /* Some padding */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make the buttons appear side by side */
-    font-size: 1.6vh; /* Increase font size */
-    margin: 0.4vh 0.2vw; /* Some margin */
-    cursor: pointer; /* Pointer/hand icon */
-    border-radius: 1.2vh; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 1.5vh 3.2vw;
+    font-size: 2vh;
+    border-radius: 1.2vh;
+    transition: background-color 0.3s ease;
 }
 
 nav button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
 }
 
 /* Gestion des pages */
@@ -70,163 +60,92 @@ nav button:hover {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: flex-start;
     opacity: 0;
     visibility: hidden;
     transform: translateY(100%);
-    
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    padding-top: 15vh;
+    box-sizing: border-box;
 }
 
-/* La page active devient visible */
 .page.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-/* Style des titres */
-
-h1 {
-    font-size: 8vh;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    padding-top: 2vh; /* Adjust the padding to move the title higher */
+.page.scrollable {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 10vh;
 }
 
-/* Style du header*/
+/* Style du header */
 header {
-    position: fixed;
-    top: 12vh;
-    margin-left: 3vw;
-    max-width: 50vw;
-    max-height: 20vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center;
-    padding: 1vh 2vw;
-    box-sizing: border-box;
-    z-index: 1000;
+    position: relative;
+    width: 90%;
+    max-width: 800px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    padding: 2vh;
+    text-align: center;
+    border-radius: 1vh;
     border: 0.2vh solid white;
-    border-radius: 1vh;
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
+    margin-bottom: 2vh;
 }
 
-/* Specific header style for the 'Accueil' page */
-.body-Accueil header {
-    top: 12vh; /* Adjust the top position */
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-    color: white; /* Change text color to white */
-    padding: 1vh 2vw; /* Add padding */
-    border-radius: 1vh; /* Add rounded corners */
-    border: 0.2vh solid white; /* Add a white border */
-    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    max-width: 50vw; /* Reduce the width of the box around the h1 */
-    max-height: 20vh;
-    margin-left: 0; /* Center the box horizontally */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.body-Formules header {
-    top: 12vh; /* Adjust the top position */
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-    color: white; /* Change text color to white */
-    padding: 2vh; /* Add padding */
-    border-radius: 1vh; /* Add rounded corners */
-    margin-left: 0; /* Center the box horizontally */
-    border: 0.2vh solid white; /* Add a white border */
-    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
-    max-width: 50vw; /* Add a subtle shadow */
-    max-height: 20vh;
-}
-
-.body-Lieux header {
-    top: 12vh; /* Adjust the top position */
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-    color: white; /* Change text color to white */
-    padding: 1vh 2vw; /* Add padding */
-    border-radius: 1vh; /* Add rounded corners */
-    border: 0.2vh solid white; /* Add a white border */
-    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    max-width: 50vw; /* Reduce the width of the box around the h1 */
-    max-height: 20vh;
-    margin-left: 0; /* Center the box horizontally */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Style for the container on the 'formules' page */
+/* Style du contenu */
 .container {
-    display: flex; /* Use Flexbox to align children */
-    justify-content: space-between; /* Add space between the children */
-    padding: 2vh; /* Add padding to the container */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    gap: 2vw; /* Add a gap between the children */
-    padding-top: 6vh; /* Add padding to the top of the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh;
+    width: 90vw;
+    max-width: 800px;
+    margin: auto;
+    gap: 2vh;
 }
 
-.body-Formules .container {
-    margin-top: 15vh; /* Add space between the header and the container using vh units */
-}
-
-#container {
-    grid-template-areas: "left right"; /* Define the grid layout */
-    display: grid; /* Use CSS Grid for layout */
-    gap: 2vw; /* Add a gap between grid items */
-    column-gap: 2vw;
-}
-
-/* Style for the left container on the 'formules' page */
-.body-Formules .left {
-    flex: 1; /* Allow the left container to grow */
-    padding: 2vh 7.85vw; /* Add padding for spacing */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    background-color: rgba(0, 0, 0, 0.5); /* Background color */
-    border: 0.2vh solid white; /* Add a white border */
+.left, .right {
+    width: 100%;
+    padding: 2vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0.2vh solid white;
     color: white;
     border-radius: 1vh;
-    margin-right: 1vw; /* Add margin to the right */
+    text-align: center;
 }
 
-/* Style for the right container on the 'formules' page */
-.body-Formules .right {
-    flex: 1; /* Allow the right container to grow */
-    padding: 2vh 7.85vw; /* Add padding for spacing */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    background-color: rgba(0, 0, 0, 0.5); /* Background color */
-    border: 0.2vh solid white; /* Add a white border */
-    color: white;
-    border-radius: 1vh;
-    margin-left: 1vw; /* Add margin to the left */
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .left, .right {
+        width: 45%;
+    }
 }
 
-/* Style for the footer */
+/* Footer */
 footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2vh 0;
-    font-weight: 600;
-    font-size: 1.8vh;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding: 1vh;
+    text-align: center;
     background-color: #154517;
-    border-top: 0.5vh solid #4CAF50;
-    width: 100vw; /* Ensure the footer takes the full width */
-    position: fixed; /* Fix the footer at the bottom */
-    bottom: 0; /* Align the footer to the bottom */
     color: white;
+    border-top: 0.5vh solid #4CAF50;
 }
+
 
 footer p {
     margin: 0 1vw; /* Add margin between text and links */
