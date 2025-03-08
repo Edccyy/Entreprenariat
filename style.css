@@ -28,9 +28,8 @@ body {
 nav {
     position: fixed; /* Fixe la barre de navigation en haut */
     top: 1vh;
-    left: 0;
     width: 100vw;
-    display: flex; /* Utilise flexbox pour aligner les éléments */
+    display: flex; 
     justify-content: space-around; /* Change to space-around for equal distribution */
     z-index: 1000; /* Assure qu'elle est au-dessus des pages */
     padding: 1vh;
@@ -39,32 +38,29 @@ nav {
 }
 
 nav div {
-    flex: 0 0 10vw; /* Set each button container to 10% of the screen width */
+    flex: 15vw; 
     display: flex;
-    justify-content: center; /* Center the button within the div */
+    justify-content: center; 
 }
 
 nav button {
-    background-color: #4CAF50; /* Green background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 1.5vh 3.2vw; /* Some padding */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make the buttons appear side by side */
-    font-size: 1.6vh; /* Increase font size */
-    margin: 0.4vh 0.2vw; /* Some margin */
-    cursor: pointer; /* Pointer/hand icon */
-    border-radius: 1.2vh; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    background-color: #4CAF50; 
+    border: none; 
+    color: white; 
+    padding: 1.5vh 3.2vw; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 2.5vh; 
+    margin: 0.4vh 0.2vw; 
+    cursor: pointer; 
+    border-radius: 1.2vh; 
+    transition: background-color 0.3s ease; 
 }
 
 nav button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #2f6e32; 
 }
-
-
-
 
 /* Pages */
 .page {
@@ -80,7 +76,7 @@ nav button:hover {
     opacity: 0;
     visibility: hidden;
     transform: translateY(100%);
-    padding-top: 15vh;
+    padding-top: 10vh;
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
@@ -94,12 +90,9 @@ nav button:hover {
     overflow-y: auto;
     height: auto;
     min-height: 100vh;
-    padding-bottom: 10vh;
 }
 
-
-
-/* Style des titres */
+/* Titre (h1) */
 
 h1 {
     font-size: 8vh;
@@ -107,10 +100,9 @@ h1 {
     text-align: center;
     margin: 0;
     padding: 0;
-    padding-top: 2vh; /* Adjust the padding to move the title higher */
 }
 
-/* Style du header*/
+/* Header*/
 header {
     position: relative;
     top: 2vh;
@@ -131,13 +123,11 @@ header {
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
 }
 
-/* Specific header style for the 'Accueil' page */
 .body-Accueil header {
     position: relative;
     top: 2vh; /* Adjust the top position */
     background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
     color: white; /* Change text color to white */
-    padding: 1vh 2vw; /* Add padding */
     border-radius: 1vh; /* Add rounded corners */
     border: 0.2vh solid white; /* Add a white border */
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
@@ -168,7 +158,6 @@ header {
     top: 2vh; /* Adjust the top position */
     background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
     color: white; /* Change text color to white */
-    padding: 1vh 2vw; /* Add padding */
     border-radius: 1vh; /* Add rounded corners */
     border: 0.2vh solid white; /* Add a white border */
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
@@ -181,24 +170,45 @@ header {
     text-align: center;
 }
 
-/* Style for the container on the 'formules' page */
+/* Titre (h1) */
+
+h1 {
+    font-size: 8vh;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/*Presentation*/
+.presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2vh;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    color: white; /* Change text color to white */
+    padding: 1vh 2vw; /* Add padding */
+    border-radius: 1vh; /* Add rounded corners */
+    border: 0.2vh solid white; /* Add a white border */
+}
+
+/* Container */
 .container {
     position: relative;
-    top: 2vh; /* Adjust the top position */
+    top: -10vh; /* Adjust the top position */
     padding: 2vh; /* Add padding to the container */
     box-sizing: border-box; /* Include padding in the element's total width and height */
     grid-template-areas: "left right"; /* Define the grid layout */
     display: grid; /* Use CSS Grid for layout */
     gap: 2vw; /* Add a gap between grid items */
     column-gap: 2vw;
-}
-
-.body-Formules .container {
     margin-top: 15vh; /* Add space between the header and the container using vh units */
 }
 
-/* Style for the left container on the 'formules' page */
-.body-Formules .left {
+.left {
     grid-area: left; /* Assign the left container to the 'left' grid area */
     flex: 1; /* Allow the left container to grow */
     padding: 2vh 7.85vw; /* Add padding for spacing */
@@ -210,8 +220,7 @@ header {
     margin-right: 0.5vw; /* Add margin to the right */
 }
 
-/* Style for the right container on the 'formules' page */
-.body-Formules .right {
+.right {
     grid-area: right; /* Assign the right container to the 'right' grid area */
     flex: 1; /* Allow the right container to grow */
     padding: 2vh 7.85vw; /* Add padding for spacing */
