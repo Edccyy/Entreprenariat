@@ -86,3 +86,28 @@ nav button:hover {
     visibility: visible;
     transform: translateY(0);
 }
+
+/* Style des titres */
+
+h1 {
+    font-size: 8em;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px; /* Adjust the padding to move the title higher */
+}
+
+/* Style du header*/
+header {
+    position: fixed;
+    top: 350px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
