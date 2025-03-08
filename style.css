@@ -111,3 +111,19 @@ header {
     box-sizing: border-box;
     z-index: 1000;
 }
+
+/* Style for the left container on the 'formules' page */
+.body-Formules .left {
+    width: 50%; /* Occupies half of the body */
+    float: left; /* Aligns it to the right */
+    padding: 100px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Style for the right container on the 'formules' page */
+.body-Formules .right {
+    width: 50%; /* Occupies half of the body */
+    float: right; /* Aligns it to the right */
+    padding: 100px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
