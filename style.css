@@ -137,6 +137,18 @@ header {
     text-align: center;
 }
 
+#presentation {
+    font-size: 2.5vh;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 1vh 2vw;
+    padding-top: 2vh; /* Adjust the padding to move the title higher */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: white 0.2vh solid;
+    border-radius: 1vh;
+}
+
 .body-Formules header {
     top: 12vh; /* Adjust the top position */
     background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
