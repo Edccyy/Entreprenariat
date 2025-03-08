@@ -17,13 +17,14 @@ body {
 
 .body-Formules {
     background-image: url(./Images/Background_Formules.jpg);
+    overflow-y: auto;
 }
 
 .body-Lieux {
     background-image: url(./Images/9568816.jpg);
 }
 
-/* Style de la navigation pour qu'elle reste accessible */
+/* Nav */
 nav {
     position: fixed; /* Fixe la barre de navigation en haut */
     top: 1vh;
@@ -62,7 +63,10 @@ nav button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
 
-/* Gestion des pages */
+
+
+
+/* Pages */
 .page {
     position: absolute;
     top: 0;
@@ -71,21 +75,29 @@ nav button:hover {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: flex-start;
+    flex-direction: column;
     opacity: 0;
     visibility: hidden;
     transform: translateY(100%);
-    
+    padding-top: 15vh;
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-/* La page active devient visible */
 .page.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
+
+.page.scrollable {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 10vh;
+}
+
+
 
 /* Style des titres */
 
@@ -100,8 +112,8 @@ h1 {
 
 /* Style du header*/
 header {
-    position: fixed;
-    top: 12vh;
+    position: relative;
+    top: 2vh;
     margin-left: 3vw;
     max-width: 50vw;
     max-height: 20vh;
@@ -121,7 +133,8 @@ header {
 
 /* Specific header style for the 'Accueil' page */
 .body-Accueil header {
-    top: 12vh; /* Adjust the top position */
+    position: relative;
+    top: 2vh; /* Adjust the top position */
     background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
     color: white; /* Change text color to white */
     padding: 1vh 2vw; /* Add padding */
@@ -138,7 +151,8 @@ header {
 }
 
 .body-Formules header {
-    top: 12vh; /* Adjust the top position */
+    position: relative;
+    top: 2vh; /* Adjust the top position */
     background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
     color: white; /* Change text color to white */
     padding: 2vh; /* Add padding */
@@ -151,7 +165,8 @@ header {
 }
 
 .body-Lieux header {
-    top: 12vh; /* Adjust the top position */
+    position: relative;
+    top: 2vh; /* Adjust the top position */
     background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
     color: white; /* Change text color to white */
     padding: 1vh 2vw; /* Add padding */
