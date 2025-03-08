@@ -155,9 +155,15 @@ header {
     box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
+#container {
+    grid-template-areas: "left right"; /* Define the grid layout */
+    display: grid; /* Use CSS Grid for layout */
+    gap : 2vw; /* Add a gap between grid items */
+}
+
 /* Style for the left container on the 'formules' page */
-.body-Formules .left {
-    width: 48%; /* Occupies almost half of the container */
+.left {
+    grid-area: left; /* Define the grid area for the left container */
     padding: 20px; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in the element's total width and height */
     background-color: rgba(0, 0, 0, 0.5); /* Background color */
@@ -167,8 +173,8 @@ header {
 }
 
 /* Style for the right container on the 'formules' page */
-.body-Formules .right {
-    width: 48%; /* Occupies almost half of the container */
+.right {
+    grid-area: rihgt; /* Define the grid area for the right container */
     padding: 20px; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in the element's total width and height */
     background-color: rgba(0, 0, 0, 0.5); /* Background color */
