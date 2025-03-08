@@ -104,20 +104,36 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2vh;
-    width: 90vw;
-    max-width: 800px;
-    margin: auto;
-    gap: 2vh;
+    text-align: center;
 }
 
-.left, .right {
-    width: 100%;
-    padding: 2vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 0.2vh solid white;
-    color: white;
-    border-radius: 1vh;
+.body-Formules header {
+    top: 12vh; /* Adjust the top position */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    color: white; /* Change text color to white */
+    padding: 2vh; /* Add padding */
+    border-radius: 1vh; /* Add rounded corners */
+    margin-left: 0; /* Center the box horizontally */
+    border: 0.2vh solid white; /* Add a white border */
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
+    max-width: 50vw; /* Add a subtle shadow */
+    max-height: 20vh;
+}
+
+.body-Lieux header {
+    top: 12vh; /* Adjust the top position */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    color: white; /* Change text color to white */
+    padding: 1vh 2vw; /* Add padding */
+    border-radius: 1vh; /* Add rounded corners */
+    border: 0.2vh solid white; /* Add a white border */
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    max-width: 50vw; /* Reduce the width of the box around the h1 */
+    max-height: 20vh;
+    margin-left: 0; /* Center the box horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
