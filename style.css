@@ -1,14 +1,14 @@
 /*Body*/
 body {
     background: url(./Images/Background_Acceuil.jpg) no-repeat fixed;
-    height: 100vh; /* Fait en sorte que le body prenne toute la hauteur de l'écran */
-    width: 100vw; /* Assure que le body couvre toute la largeur */
-    margin: 0; /* Supprime les marges */
-    padding: 0; /* Supprime les espacements internes */
-    background-size: cover; /* Fait en sorte que l'image couvre toute la surface */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    overflow: hidden; /* Empêche les barres de défilement inutiles */
+    height: 100vh; 
+    width: 100vw; 
+    margin: 0; 
+    padding: 0;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    overflow: hidden; 
 }
 
 .body-Accueil {
@@ -17,7 +17,6 @@ body {
 
 .body-Formules {
     background-image: url(./Images/Background_Formules.jpg);
-    overflow-y: auto;
 }
 
 .body-Lieux {
@@ -26,15 +25,15 @@ body {
 
 /* Nav */
 nav {
-    position: fixed; /* Fixe la barre de navigation en haut */
+    position: fixed;
     top: 1vh;
     width: 100vw;
     display: flex; 
-    justify-content: space-around; /* Change to space-around for equal distribution */
+    justify-content: space-around; 
     z-index: 1000; /* Assure qu'elle est au-dessus des pages */
     padding: 1vh;
     border-radius: 1vh;
-    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
+    box-sizing: border-box; 
 }
 
 nav div {
@@ -86,22 +85,6 @@ nav button:hover {
     transform: translateY(0);
 }
 
-.page.scrollable {
-    overflow-y: auto;
-    height: auto;
-    min-height: 100vh;
-}
-
-/* Titre (h1) */
-
-h1 {
-    font-size: 8vh;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
 /* Header*/
 header {
     position: relative;
@@ -111,7 +94,7 @@ header {
     max-height: 20vh;
     width: 100vw;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: center; 
     align-items: center;
     padding: 1vh 2vw;
     box-sizing: border-box;
@@ -125,15 +108,15 @@ header {
 
 .body-Accueil header {
     position: relative;
-    top: 2vh; /* Adjust the top position */
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-    color: white; /* Change text color to white */
-    border-radius: 1vh; /* Add rounded corners */
-    border: 0.2vh solid white; /* Add a white border */
-    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    max-width: 50vw; /* Reduce the width of the box around the h1 */
+    top: 1vh; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    border-radius: 1vh; 
+    border: 0.2vh solid white; 
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2); 
+    max-width: 50vw; 
     max-height: 20vh;
-    margin-left: 0; /* Center the box horizontally */
+    margin-left: 0; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,28 +125,28 @@ header {
 
 .body-Formules header {
     position: relative;
-    top: 2vh; /* Adjust the top position */
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-    color: white; /* Change text color to white */
-    border-radius: 1vh; /* Add rounded corners */
-    margin-left: 0; /* Center the box horizontally */
-    border: 0.2vh solid white; /* Add a white border */
+    top: 1vh; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    border-radius: 1vh;  /* coins arondis*/
+    margin-left: 0; 
+    border: 0.2vh solid white; 
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
-    max-width: 50vw; /* Add a subtle shadow */
+    max-width: 50vw; 
     max-height: 20vh;
 }
 
 .body-Lieux header {
     position: relative;
-    top: 2vh; /* Adjust the top position */
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-    color: white; /* Change text color to white */
-    border-radius: 1vh; /* Add rounded corners */
-    border: 0.2vh solid white; /* Add a white border */
-    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    max-width: 50vw; /* Reduce the width of the box around the h1 */
+    top: 1vh; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    border-radius: 1vh; 
+    border: 0.2vh solid white; 
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2); 
+    max-width: 50vw; 
     max-height: 20vh;
-    margin-left: 0; /* Center the box horizontally */
+    margin-left: 0; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,32 +163,62 @@ h1 {
     padding: 0;
 }
 
+h2 {
+    font-size: 4vh;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 3vh;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    font-size: 3vh;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 3vw;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
+    border: 0.2vh solid white;
+    border-radius: 1vh; 
+}
+
 /*Presentation*/
 .presentation {
+    position: relative;
+    top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 2vh;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-    color: white; /* Change text color to white */
-    padding: 1vh 2vw; /* Add padding */
-    border-radius: 1vh; /* Add rounded corners */
-    border: 0.2vh solid white; /* Add a white border */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    padding: 1vh 2vw; 
+    border-radius: 1vh; 
+    border: 0.2vh solid white; 
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
 }
 
 /* Container */
 .container {
     position: relative;
-    top: -10vh; /* Adjust the top position */
-    padding: 2vh; /* Add padding to the container */
+    padding: 1vh; /* Add padding to the container */
     box-sizing: border-box; /* Include padding in the element's total width and height */
     grid-template-areas: "left right"; /* Define the grid layout */
     display: grid; /* Use CSS Grid for layout */
     gap: 2vw; /* Add a gap between grid items */
     column-gap: 2vw;
-    margin-top: 15vh; /* Add space between the header and the container using vh units */
+    margin-top: 5vh; /* Add space between the header and the container using vh units */
 }
 
 .left {
@@ -234,17 +247,16 @@ h1 {
 
 /* Style for the footer */
 footer {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2vh 0;
     font-weight: 600;
     font-size: 1.8vh;
-    background-color: #154517;
+    background-color: #1e5f20;
     border-top: 0.5vh solid #4CAF50;
-    width: 100vw; /* Ensure the footer takes the full width */
-    position: fixed; /* Fix the footer at the bottom */
-    bottom: 0; /* Align the footer to the bottom */
+    width: 100vw;
+    bottom: 1vh;
     color: white;
 }
 
