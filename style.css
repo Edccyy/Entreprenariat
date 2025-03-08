@@ -155,7 +155,6 @@ header {
     top: 2vh; /* Adjust the top position */
     background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
     color: white; /* Change text color to white */
-    padding: 2vh; /* Add padding */
     border-radius: 1vh; /* Add rounded corners */
     margin-left: 0; /* Center the box horizontally */
     border: 0.2vh solid white; /* Add a white border */
@@ -184,27 +183,23 @@ header {
 
 /* Style for the container on the 'formules' page */
 .container {
-    display: flex; /* Use Flexbox to align children */
-    justify-content: space-between; /* Add space between the children */
+    position: relative;
+    top: 2vh; /* Adjust the top position */
     padding: 2vh; /* Add padding to the container */
     box-sizing: border-box; /* Include padding in the element's total width and height */
-    gap: 2vw; /* Add a gap between the children */
-    padding-top: 6vh; /* Add padding to the top of the container */
-}
-
-.body-Formules .container {
-    margin-top: 15vh; /* Add space between the header and the container using vh units */
-}
-
-#container {
     grid-template-areas: "left right"; /* Define the grid layout */
     display: grid; /* Use CSS Grid for layout */
     gap: 2vw; /* Add a gap between grid items */
     column-gap: 2vw;
 }
 
+.body-Formules .container {
+    margin-top: 15vh; /* Add space between the header and the container using vh units */
+}
+
 /* Style for the left container on the 'formules' page */
 .body-Formules .left {
+    grid-area: left; /* Assign the left container to the 'left' grid area */
     flex: 1; /* Allow the left container to grow */
     padding: 2vh 7.85vw; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in the element's total width and height */
@@ -212,11 +207,12 @@ header {
     border: 0.2vh solid white; /* Add a white border */
     color: white;
     border-radius: 1vh;
-    margin-right: 1vw; /* Add margin to the right */
+    margin-right: 0.5vw; /* Add margin to the right */
 }
 
 /* Style for the right container on the 'formules' page */
 .body-Formules .right {
+    grid-area: right; /* Assign the right container to the 'right' grid area */
     flex: 1; /* Allow the right container to grow */
     padding: 2vh 7.85vw; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in the element's total width and height */
@@ -224,7 +220,7 @@ header {
     border: 0.2vh solid white; /* Add a white border */
     color: white;
     border-radius: 1vh;
-    margin-left: 1vw; /* Add margin to the left */
+    margin-left: 0.5vw; /* Add margin to the left */
 }
 
 /* Style for the footer */
